@@ -1,0 +1,61 @@
+without optimization:
+
+NUM_NODE = 10
+	ASM:  0 sec, 000000 micro sec
+	C:  0 sec, 000000 micro sec
+
+NUM_NODE = 100
+	ASM:  0 sec, 00000 micro sec
+	C:  0 sec, 000001 micro sec
+
+NUM_NODE = 1000
+	ASM:  0 sec, 000002 micro sec
+	C:  0 sec, 000005 micro sec
+
+NUM_NODE = 10000
+	ASM: 0 sec, 000027 micro sec
+	C: 0 sec, 000047 micro sec
+
+NUM_NODE = 100000
+	ASM:  0 sec, 000138 micro sec
+	C:  0 sec, 000399 micro sec
+
+NUM_NODE = 1000000
+	ASM:  0 sec, 001762 micro sec
+	C:  0 sec, 004041 micro sec
+
+The C code is slower than the assembly code because it requires a compiler to translate the code in to machine code. The assembly code uses an assembler that is faster than a compiler. 
+
+
+with optimization:
+
+NUM_NODE = 10
+	ASM:  0 sec, 000000 micro sec
+	C:  0 sec, 000001 micro sec
+
+NUM_NODE = 100
+	ASM:  0 sec, 000000 micro sec
+	C:  0 sec, 000001 micro sec
+
+NUM_NODE = 1000
+	ASM:  0 sec, 000002 micro sec
+	C:  0 sec, 000003 micro sec
+
+NUM_NODE = 10000
+	ASM:  0 sec, 000023 micro sec
+	C:  0 sec, 000022 micro sec
+
+NUM_NODE = 100000
+	ASM:  0 sec, 000215 micro sec
+	C:  0 sec, 000211 micro sec
+
+NUM_NODE = 1000000
+	ASM:  0 sec, 002661 micro sec
+	C:  0 sec, 002445 micro sec
+
+
+reverse_C has 18 instructions with optimization.
+
+reverse_C has 33 instructions without optimization.
+
+reverse_asm has 10 instructions with and without optimization. 
